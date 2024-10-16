@@ -6,50 +6,53 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    background-color: black;
     line-height: 1.6;
-    padding: 20px;
+    padding-top: 120px; /* To avoid hiding under the fixed header */
 }
 
 /* Header Styling */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #2b3d4f;
-    color: black;
-    padding: 30px 0;
+    color: white;
+    padding: 10px 0;
     text-align: center;
-    border-bottom: 5px solid #4a6d89;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #4a6d89;
+    z-index: 1000;
 }
 
 header h1 {
-    font-size: 3em;
-    font-weight: bold;
+    font-size: 1.5em;
     margin-bottom: 5px;
 }
 
 header h2 {
-    font-size: 1.8em;
-    font-weight: 300;
+    font-size: 1.2em;
+    font-weight: lighter;
 }
 
 nav ul {
     list-style: none;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 nav ul li {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
-    font-weight: bold;
+    font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: color 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 nav ul li a:hover {
@@ -58,112 +61,28 @@ nav ul li a:hover {
 
 /* Section Styling */
 section {
-    margin: 60px 0;
-    padding: 40px 20px;
-    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
     border-radius: 8px;
-    border: 1px solid #e0e0e0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 section h3 {
     color: #2b3d4f;
-    font-size: 2em;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #4a6d89;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4a6d89;
     padding-bottom: 10px;
-}
-
-/* Project Grid */
-.project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.project-tile {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    width: calc(33% - 20px);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease-in-out;
-}
-
-.project-tile:hover {
-    transform: translateY(-5px);
-}
-
-.project-tile img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-info {
-    padding: 15px;
-}
-
-.project-info h4 {
-    color: #2b3d4f;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.project-info p {
-    color: #555;
-    font-size: 1em;
-}
-
-/* Skills and Contact Section */
-#skills ul,
-#contact p {
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style: square;
-    padding-left: 40px;
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
-    margin-top: 60px;
-    padding: 20px 0;
+    margin-top: 20px;
+    padding: 10px 0;
     background-color: #2b3d4f;
     color: #ddd;
     font-size: 0.9em;
-    border-top: 5px solid #4a6d89;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    header h1 {
-        font-size: 2.2em;
-    }
-
-    header h2 {
-        font-size: 1.3em;
-    }
-
-    .project-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .project-tile {
-        width: 100%;
-    }
-
-    section {
-        padding: 20px;
-    }
+    border-top: 2px solid #4a6d89;
 }
