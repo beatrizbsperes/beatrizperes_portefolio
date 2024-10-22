@@ -70,6 +70,39 @@ section {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* About Section Layout */
+#about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start; /* Aligns heading and image at the start */
+    justify-content: space-between; /* Aligns heading and image side by side */
+}
+
+/* About Text Section */
+.about-text {
+    flex: 2; /* Takes more space than the image */
+}
+
+/* About Me Heading Styling */
+.about-text h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px; /* Spacing between heading and paragraph */
+}
+
+/* Styling the profile photo as a rectangle aligned to the right */
+.profile-photo {
+    flex: 1; /* Takes up less space for the image */
+    max-width: 33%; /* Limits the image size */
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+    object-fit: cover; /* Ensures the image fills the container */
+}
+
 /* Footer Styling */
 footer {
     text-align: center;
@@ -94,5 +127,18 @@ footer {
     nav ul li {
         display: block;
         margin: 10px 0;
+    }
+
+    .about-container {
+        flex-direction: column; /* Stacks the heading and image vertically on smaller screens */
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin: 20px auto; /* Centers the image when stacked */
+    }
+
+    .about-text {
+        max-width: 100%; /* Full width for the text on small screens */
     }
 }
