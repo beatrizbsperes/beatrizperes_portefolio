@@ -1,47 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beatriz Peres | Home</title>
-    <link rel="icon" href="icon.png" type="image/x-icon">
+    <title>Beatriz Peres | ePortfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <h1>Beatriz Peres</h1>
-        <h2>Geoinformatics Student</h2>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="welcome">
-            <h3>Welcome to My ePortfolio</h3>
-            <p>Explore my work in geoinformatics, including my projects, skills, and more.</p>
-        </section>
-        <section id="about">
-            <div class="about-container">
-                <div class="about-text">
-                    <h3>About Me</h3>
-                    <p>Hello! I'm Beatriz Peres, a Geoinformatics student with a passion for mapping technologies, spatial analysis, and environmental data science. I'm currently studying at [Your University] and exploring the intersection of geography and technology.</p>
-                </div>
-                <img src="profile_pic.jpg" alt="Beatriz Peres" class="profile-photo">
+<body>
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <div class="profile-container">
+            <img src="images/profile_pic.jpg" alt="Profile Photo" class="profile-photo">
+        </div>
+        <nav>
+            <a href="#home"><i class="icon">🏠</i> <span>Home</span></a>
+            <a href="#about"><i class="icon">🤓</i> <span>About me</span></a>
+            <a href="#education"><i class="icon">🎓</i> <span>Education</span></a>
+            <a href="#experience"><i class="icon">📈</i> <span>Experience and CV</span></a>
+            <a href="#skills"><i class="icon">📊</i> <span>Skills</span></a>
+            <a href="#projects"><i class="icon">📁</i> <span>Projects</span></a>
+            <a href="#contact"><i class="icon">✉️</i> <span>Contact</span></a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="content">
+        <!-- Home Section -->
+        <!-- Home Section -->
+        <section id="home">
+            <h1>Hello, I'm <span class="highlight">Beatriz Peres</span>!</h1>
+            <p>A Master's student specializing in Digital Earth, Geo Data track, with a background in Geospatial
+                Engineering and Arts.</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+            <div class="buttons">
+                <a href="#about" class="button">Read More</a>
+                <a href="#contact" class="button">Contact Me</a>
+            </div>
+ 
+            <!-- New Images Container -->
+            <div class="images-container">
+                <img src="images/cascata.jpeg" alt="Sample Image 1">
+                <img src="images/adeuspatagonia.jpeg" alt="Sample Image 2">
+                <img src="images/raposa.jpg" alt="Sample Image 3">
             </div>
         </section>
-        
-        
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Beatriz Peres. All rights reserved.</p>
-    </footer>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a passionate individual with a blend of technical and artistic skills...</p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <p>Details about my academic background in Geospatial Engineering and Arts...</p>
+        </section>
+
+        <!-- Experience and CV Section -->
+        <section id="experience">
+            <h2>Experience and CV</h2>
+            <p>Professional experience and career achievements...</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>Programming languages, tools, and competencies...</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Details about some of my key projects...</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Let's get in touch!</p>
+        </section>
+    </main>
 </body>
+
 </html>

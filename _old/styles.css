@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+    padding: 40px;
+    margin: 60px;
+}
+
+/* Smaller Sticky Header Styling */
+header {
+    background-color: #0a2540;
+    color: #ffffff;
+    padding: 5px 0; /* Smaller padding for compact header */
+    text-align: center;
+    border-bottom: 3px solid #ffcc00;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+header h2 {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 12px; /* Reduced spacing for compact look */
+}
+
+nav ul li a {
+    color: #ffcc00;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 5px #ffcc00; /* Glow effect on hover */
+}
+
+/* Section Styling */
+section {
+    margin: 100px 0;
+    padding: 50px 80px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Offset for Sticky Header */
+#about {
+    scroll-margin-top: 60px; /* Offset to prevent overlap from sticky header */
+    background-color: #f1f5f8; /* Soft gray for subtle contrast */
+    padding: 60px 80px;
+    border-radius: 12px;
+}
+
+/* About Section Layout */
+#about .about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Profile Photo Styling */
+.profile-photo {
+    flex: 1;
+    max-width: 25%; /* Reduced width for a smaller image */
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 80px;
+    padding: 30px 0;
+    background-color: #0a2540;
+    color: #ddd;
+    font-size: 0.9em;
+    border-top: 5px solid #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    header h2 {
+        font-size: 0.9em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin: 20px auto;
+        max-width: 80%;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+}
