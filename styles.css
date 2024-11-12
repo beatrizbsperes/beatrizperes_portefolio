@@ -183,6 +183,34 @@ nav a:hover {
     /* Rounded corners on hover */
 }
 
+/* Images Container Styling */
+.images-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    /* Space between images */
+    margin-top: 4rem;
+    /* Space between buttons and images */
+}
+
+.images-container img {
+    width: 100px;
+    /* Square image size */
+    height: 100px;
+    object-fit: cover;
+    /* Ensures the image fills the square without distortion */
+    border-radius: 5px;
+    /* Slightly rounded corners */
+    border: 2px solid #444;
+    /* Border to match the dark theme */
+    transition: transform 0.3s ease;
+}
+
+.images-container img:hover {
+    transform: scale(1.8);
+    /* Slight zoom effect on hover */
+}
+
 
 #home p {
     font-size: 1.25rem;
@@ -234,32 +262,7 @@ nav a:hover {
 }
 
 /* Images Container Styling */
-.images-container {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    /* Space between images */
-    margin-top: 4rem;
-    /* Space between buttons and images */
-}
 
-.images-container img {
-    width: 100px;
-    /* Square image size */
-    height: 100px;
-    object-fit: cover;
-    /* Ensures the image fills the square without distortion */
-    border-radius: 5px;
-    /* Slightly rounded corners */
-    border: 2px solid #444;
-    /* Border to match the dark theme */
-    transition: transform 0.3s ease;
-}
-
-.images-container img:hover {
-    transform: scale(1.8);
-    /* Slight zoom effect on hover */
-}
 
 
 /* Section Styling */
@@ -291,7 +294,7 @@ footer {
     width: 100%;
     position: relative;
     /* Remove extra margins or paddings if necessary */
-    border-top: 2px solid #444;
+    border: 3px solid #633838;
     margin-top: 2rem;
 }
 
@@ -360,7 +363,8 @@ footer {
     color: #e0e0e0;
     border-radius: 8px;
     margin-bottom: 2rem;
-    border-bottom: 1px solid #444444; /* Matches the line style for consistency */
+    border-bottom: 1px solid #444444;
+    /* Matches the line style for consistency */
 }
 
 #education h2 {
@@ -374,11 +378,16 @@ footer {
     flex-direction: column;
     gap: 1.5rem;
 }
+
 .highlight {
-    background-color: #444; /* Dark background to make it stand out */
-    color: #fff; /* White text color for contrast */
-    padding: 0.5rem 1rem; /* Add some padding */
-    font-weight: bold; /* Emphasize the text */
+    background-color: #444;
+    /* Dark background to make it stand out */
+    color: #fff;
+    /* White text color for contrast */
+    padding: 0.5rem 1rem;
+    /* Add some padding */
+    font-weight: bold;
+    /* Emphasize the text */
 }
 
 
@@ -400,7 +409,92 @@ footer {
     color: #aaaaaa;
 }
 
+/* Skills Section CSS */
+#skills {
+    padding: 2rem;
+    color: #ddd;
 
+}
+
+#skills h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.skills-description {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 1.5rem;
+}
+
+.languages,
+.software-tools {
+    margin-bottom: 1.5rem;
+}
+
+.languages h3,
+.software-tools h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.languages ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #bbb;
+}
+
+.languages ul li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.tools-list {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 0.5rem;
+}
+
+/* Grid for Software Icons */
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+}
+
+.icon-grid img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    border: 3px solid #633838;
+}
+
+.icon-grid img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #skills {
+        padding: 1rem;
+    }
+
+    .icon-grid img {
+        width: 60px;
+        height: 60px;
+    }
+}
 
 
 
@@ -418,10 +512,6 @@ footer {
         font-size: 0.95rem;
     }
 
-    .images-container img {
-        width: 70px;
-        height: 70px;
-    }
 
     .footer-content {
         align-items: center;
@@ -530,4 +620,5 @@ footer {
     .footer-content {
         flex-direction: row;
     }
+
 }
