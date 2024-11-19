@@ -17,8 +17,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    line-height: 150%;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
+
 
 body {
     display: flex;
@@ -50,6 +55,7 @@ body {
     bottom: 0;
     left: 0;
     overflow-y: auto;
+
     /* Enable vertical scroll for the sidebar */
 }
 
@@ -60,12 +66,11 @@ body {
 }
 
 .profile-photo {
-    width: 210px;
+    width: 150px;
     /* Increased width */
-    height: 210px;
-    /* Increased height */
-    border-radius: 50%;
-    border: 6px solid #633838;
+    height: 150px;
+
+    /*border: 4px solid #633838;*/
     /* Dark border around photo */
 }
 
@@ -78,7 +83,8 @@ nav {
 }
 
 nav a {
-    color: #bbbbbb;
+    background-color: #605e5e;
+    color: #000000;
     text-decoration: none;
     font-size: 1rem;
     display: flex;
@@ -87,13 +93,13 @@ nav a {
     padding: 0.5rem 1rem;
     width: 80%;
     text-align: left;
-    border-radius: 5px;
+
     transition: background-color 0.3s;
 }
 
 nav a:hover {
     background-color: #633838;
-    color: #ffffff;
+    color: #000000;
 }
 
 .icon {
@@ -153,7 +159,7 @@ nav a:hover {
     /* Remove underline effect on hover */
     padding: 0.2rem 0.3rem;
     /* Adjust padding for hover effect */
-    border-radius: 3px;
+
     /* Rounded corners on hover */
 }
 
@@ -179,7 +185,7 @@ nav a:hover {
     /* Remove underline effect on hover */
     padding: 0.2rem 0.3rem;
     /* Adjust padding for hover effect */
-    border-radius: 3px;
+
     /* Rounded corners on hover */
 }
 
@@ -199,9 +205,9 @@ nav a:hover {
     height: 100px;
     object-fit: cover;
     /* Ensures the image fills the square without distortion */
-    border-radius: 5px;
+
     /* Slightly rounded corners */
-    border: 2px solid #444;
+
     /* Border to match the dark theme */
     transition: transform 0.3s ease;
 }
@@ -251,7 +257,7 @@ nav a:hover {
     /* Dark button background */
     color: #cccccc;
     padding: 0.8rem 1.8rem;
-    border-radius: 5px;
+
     text-decoration: none;
     font-weight: bold;
 }
@@ -294,7 +300,7 @@ footer {
     width: 100%;
     position: relative;
     /* Remove extra margins or paddings if necessary */
-    border: 3px solid #633838;
+    border: 2px solid #633838;
     margin-top: 2rem;
 }
 
@@ -361,7 +367,7 @@ footer {
     padding: 2rem;
 
     color: #e0e0e0;
-    border-radius: 8px;
+
     margin-bottom: 2rem;
     border-bottom: 1px solid #444444;
     /* Matches the line style for consistency */
@@ -373,14 +379,18 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+#education h3 {
+    color: #f1f590;
+}
+
 .education-path {
     display: flex;
     flex-direction: column;
- 
+
 }
 
 .highlight {
-    background-color: #4f6b42;
+    background-color: #73c072;
     /* Dark background to make it stand out */
     color: #fff;
     /* White text color for contrast */
@@ -395,7 +405,7 @@ footer {
     margin-bottom: 2rem;
     padding: 1rem;
     border: 1px solid #555;
-    border-radius: 8px;
+
     background-color: #222;
 }
 
@@ -432,8 +442,9 @@ footer {
 }
 
 .languages,
-.software-tools {
-    margin-bottom: 1.5rem;
+.software-tools,
+{
+margin-bottom: 1.5rem;
 }
 
 .languages h3,
@@ -475,9 +486,9 @@ footer {
     object-fit: contain;
     background-color: #ffffff;
     padding: 8px;
-    border-radius: 8px;
+
     transition: transform 0.2s;
-    border: 3px solid #633838;
+
 }
 
 .icon-grid img:hover {
@@ -495,7 +506,7 @@ footer {
     text-align: left;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
-    color: #fff; 
+    color: #fff;
     ;
     /* Updated to match the rest of your portfolio */
 }
@@ -504,20 +515,21 @@ footer {
     margin-bottom: 2rem;
     padding: 1rem;
     border: 1px solid #555;
-    border-radius: 8px;
+
     background-color: #222;
 }
 
 .experience-item h3 {
     margin: 0 0 0.5rem;
     font-size: 1.4rem;
-    color: #4f6b42;
+    color: #f1f590;
     /* Same color for headings */
 }
 
 .experience-item p,
 .experience-item ul {
     margin: 0.5rem 0;
+    color: #ffffff;
 }
 
 .experience-item ul {
@@ -531,6 +543,7 @@ footer {
     background-color: #222;
     color: #fff;
 }
+
 .pdf-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -541,10 +554,12 @@ footer {
 .pdf-item {
     padding: 1rem;
     text-align: center;
-    border-radius: 8px;
+    width: 102%;
+    height: auto;
     font-size: 1rem;
     font-weight: bold;
-    background-color: #444; /* Different background colors for each item */
+    background-color: #444;
+    /* Different background colors for each item */
     color: #fff;
     transition: transform 0.2s ease-in-out;
 }
@@ -556,16 +571,20 @@ footer {
 
 .pdf-item a {
     text-decoration: none;
-    color: #eff557;
+    color: #4b8431;
     /* Ensures link color matches the portfolio design */
+}
+
+.pdf-item p {
+    color: white;
+    font-size: x-small;
 }
 
 /* PDF Preview */
 .pdf-preview {
-    width: 100%;
-    max-width: 100%;
+    width: 110%;
     height: auto;
-    border-radius: 8px;
+
     margin-top: 1rem;
     border: 2px solid #444;
 }
@@ -581,10 +600,10 @@ footer {
     max-width: 100%;
     height: 300px;
     border: none;
-    border-radius: 8px;
+
 }
 
-
+#espaco_pdf {}
 
 
 /* Responsive Design */
@@ -649,6 +668,7 @@ footer {
     .profile-container,
     nav a span {
         display: none;
+        line-height: 9px;
         /* Hide profile image and labels on small screens */
     }
 
@@ -663,6 +683,7 @@ footer {
         align-items: center;
         font-size: 0.9rem;
         padding: 0.5rem;
+        line-height: 10%;
     }
 
     #content {

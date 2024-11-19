@@ -5,31 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beatriz Peres | ePortfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/icon.png" type="image/x-icon">
 </head>
 
 <body>
-    <!-- Sidebar -->
     <aside id="sidebar">
         <div class="profile-container">
-            <img src="images/profile_pic.jpg" alt="Profile Photo" class="profile-photo">
+            <img src="images/profile_pic2.jpeg" alt="Profile Photo" class="profile-photo">
         </div>
         <nav>
-            <a href="#home"><i class="icon">🏠</i> <span>Home</span></a>
-            <a href="#about"><i class="icon">🤓</i> <span>About me</span></a>
-            <a href="#education"><i class="icon">🎓</i> <span>Education</span></a>
-            <a href="#skills"><i class="icon">📊</i> <span>Skills</span></a>
-            <a href="#experience"><i class="icon">📈</i> <span>Experience and Certificates</span></a>
-            <a href="#projects"><i class="icon">📁</i> <span>Projects</span></a>
-            <a href="#contact"><i class="icon">✉️</i> <span>Contact</span></a>
+            <a href="#home"><img height="25" class="icon" src="images/house-solid.svg" /> <span>Home</span></a>
+            <a href="#about"><img height="25" class="icon" src="images/address-card-regular.svg" /> <span>About
+                    me</span></a>
+            <a href="#education"><img height="25" class="icon" src="images/school-solid.svg" />
+                <span>Education</span></a>
+            <a href="#experience"><img height="25" class="icon" src="images/briefcase-solid.svg" />
+                <span>Experience</span></a>
+            <a href="#skills"><img height="25" class="icon" src="images/list-check-solid.svg" /> <span>Skills and
+                    Certificates</span></a>
+            <a href="#projects"><img height="25" class="icon" src="images/folder-open-regular.svg" />
+                <span>Projects</span></a>
+            <a href="#contact"><img height="25" class="icon" src="images/envelope-solid.svg" /> <span>Contact</span></a>
         </nav>
     </aside>
-
-    <!-- Main Content -->
     <main id="content">
-        <!-- Home Section -->
-        <!-- Home Section -->
         <section id="home">
             <h1>Hello, I'm <span class="highlight">Beatriz Peres</span>!</h1>
             <p>Geospatial engineer and currently a student at the University of Salzburg, Austria.
@@ -43,9 +47,6 @@
                 <a href="#contact" class="button">Contact Me</a>
             </div>
         </section>
-
-
-        <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
             <p>I'm a portuguese geospatial engineer with a passion for exploring and advancing technology in Earth
@@ -59,15 +60,12 @@
             </p>
             <p>Outside of work and studies, I enjoy outdoor activities like hiking, climbing, and camping,
                 which keep me connected to some of the landscapes I study.</p>
-            <!-- New Images Container -->
             <div class="images-container">
                 <img src="images/cascata.jpeg" alt="Sample Image 1">
                 <img src="images/trabalho.jpeg" alt="Sample Image 2">
                 <img src="images/raposa.jpg" alt="Sample Image 3">
             </div>
         </section>
-
-        <!-- Education Section -->
         <section id="education">
             <h2>Education</h2>
             <div class="education-path">
@@ -80,15 +78,18 @@
                     </p>
                 </div>
                 <div class="education-item">
+                    <h3>Erasmus Exchange Experience</h3>
+                    <p>In 2018, I participated in an Erasmus program, studying for six months at the
+                        <a href="https://abaroma.it/">Fine Arts Academy of Rome</a>
+                        , where I expanded my knowledge and artistic techniques.
+                    </p>
+                </div>
+                <div class="education-item">
                     <h3>Bachelor's in Art and Heritage Sciences</h3>
                     <p>From September 2016 to June 2019, I pursued a bachelor's degree in Art and Heritage Sciences,
                         with a specialization track in Restoration and Conservation of fine arts at the
                         <a href="https://www.belasartes.ulisboa.pt/en/">Faculty of Fine Arts, University of Lisbon</a>.
                         During this time, I gained a strong grounding in art and heritage science.
-                    </p>
-                    <p>In 2018, I participated in an Erasmus program, studying for six months at the
-                        <a href="https://abaroma.it/">Fine Arts Academy of Rome</a>
-                        , where I expanded my knowledge and artistic techniques.
                     </p>
                 </div>
                 <div class="education-item">
@@ -97,73 +98,8 @@
                 </div>
             </div>
         </section>
-
-
-        <!-- Skills Section -->
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <p class="skills-description">
-                I have experience working with aerial LiDAR, mobile mapping, and UAV-based photogrammetry. Skilled in
-                laser scanning, Digital Terrain Model (DTM) creation and modeling, feature extraction, structure
-                monitoring, stockpile volume measurement, and GeoData quality control.
-            </p>
-
-            <div class="languages">
-                <h3>Languages</h3>
-                <ul>
-                    <li>Portuguese (Native)</li>
-                    <li>English (C1)</li>
-                    <li>Italian (B2)</li>
-                </ul>
-            </div>
-
-            <div class="software-tools">
-                <h3>Software & Tools</h3>
-                <div class="tools-list">
-                    Cyclone 3DR, POSPac MMS, Riegl software, Agisoft Metashape, TopoDOT, QGIS, ArcGIS, Python
-                </div>
-                <div class="icon-placeholder">
-                    <!-- Space for icons -->
-                    <p>
-                    <div class="icon-grid">
-                        <img src="images/reshaper.png" alt="Cyclone 3DR">
-                        <img src="images/pospac.png" alt="POSPac MMS">
-                        <img src="images/riegl.jpg" alt="Riegl Software">
-                        <img src="images/agisoft.png" alt="Agisoft Metashape">
-                        <img src="images/topodot.png" alt="TopoDOT">
-                        <img src="images/qgis.svg" alt="QGis">
-                        <img src="images/arcgis.webp" alt="ArcGIS">
-                        <img src="images/python.png" alt="Pyhton">
-                    </div>
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!-- Experience and CV Section -->
         <section id="experience">
-            <h2>Work Experience</h2>
-
-            <!-- Barista Experience -->
-            <div class="experience-item">
-                <h3>Barista (October 2020 - March 2022)</h3>
-                <p>
-                    Worked as a Barista, gaining valuable social skills, and learning how to effectively interact with
-                    customers.
-                    Developed strong communication abilities and customer service experience.
-                </p>
-            </div>
-
-            <!-- Geospatial Engineering Intern at Geotrilho -->
-            <div class="experience-item">
-                <h3>Geospatial Engineering Intern at Geotrilho (April 2022 - September 2022)</h3>
-                <p>
-                    Learned the basics of topographic surveys, feature extraction techniques, and surveying methods such
-                    as TLS, MLS, and ALS.
-                </p>
-            </div>
-
-            <!-- Geospatial Engineer at Geotrilho -->
+            <h2>Experience</h2>
             <div class="experience-item">
                 <h3>Geospatial Engineer at Geotrilho (September 2022 - July 2024)</h3>
                 <p>
@@ -179,38 +115,86 @@
                 </ul>
                 </p>
             </div>
-
+            <div class="experience-item">
+                <h3>Geospatial Engineering Intern at Geotrilho (April 2022 - September 2022)</h3>
+                <p>
+                    Learned the basics of topographic surveys, feature extraction techniques, and surveying methods such
+                    as TLS, MLS, and ALS.
+                </p>
+            </div>
         </section>
-
-            <!-- PDF Section -->
+        <section id="skills">
+            <h2>Skills and Certificates</h2>
+            <p>I have experience working with aerial LiDAR, mobile mapping, and UAV-based photogrammetry. Skilled
+                in
+                laser scanning, Digital Terrain Model (DTM) creation and modeling, feature extraction, structure
+                monitoring, stockpile volume measurement, and GeoData quality control.
+            </p>
+            <div class="languages">
+                <h3>Languages</h3>
+                <ul>
+                    <li>Portuguese (Native)</li>
+                    <li>English (C1)</li>
+                    <li>Italian (B2)</li>
+                </ul>
+            </div>
+            <div class="software-tools">
+                <h3>Software & Tools</h3>
+                <div class="tools-list">
+                    Cyclone 3DR, POSPac MMS, Riegl software, Agisoft Metashape, TopoDOT, QGIS, ArcGIS, Python
+                </div>
+                <div class="icon-placeholder">
+                    <p>
+                    <div class="icon-grid">
+                        <img src="images/reshaper.png" alt="Cyclone 3DR">
+                        <img src="images/pospac.png" alt="POSPac MMS">
+                        <img src="images/riegl.jpg" alt="Riegl Software">
+                        <img src="images/agisoft.png" alt="Agisoft Metashape">
+                        <img src="images/topodot.png" alt="TopoDOT">
+                        <img src="images/qgis.svg" alt="QGis">
+                        <img src="images/arcgis.webp" alt="ArcGIS">
+                        <img src="images/python.png" alt="Pyhton">
+                    </div>
+                    </p>
+                </div>
+            </div>
+            <h4>A1-A3 license Open Sub Category</h4>
+            <p>The A1-A3 license allows drone pilots to fly in low-risk areas, with A1 for drones
+                under 250g, A2 for closer flights to people, and A3 for flying in open areas far
+                from people.</p>
+            <h3></h3>
+            <p></p>
+            <h3></h3>
+            <p></p>
             <div class="pdf-grid">
-                <!-- PDF Item 1 -->
                 <div class="pdf-item">
-                    <a href="C:\Users\35196\Documents\GitHub\beatrizperes.github.io\certificates\Beatriz Peres_A1-A3 license Open Sub Category.pdf" download>
+                    <a href="C:\Users\35196\Documents\GitHub\beatrizperes.github.io\certificates\Beatriz Peres_A1-A3 license Open Sub Category.pdf"
+                        download>
                         <h4>A1-A3 license Open Sub Category</h4>
-                        <p>Click to download or preview</p>
+                        <p>(click to download or preview)</p>
                     </a>
                     <div class="pdf-preview-container">
-                        <iframe class="pdf-preview" src="C:\Users\35196\Documents\GitHub\beatrizperes.github.io\certificates\Beatriz Peres_A1-A3 license Open Sub Category.pdf" frameborder="0"></iframe>
+                        <iframe class="pdf-preview"
+                            src="C:\Users\35196\Documents\GitHub\beatrizperes.github.io\certificates\Beatriz Peres_A1-A3 license Open Sub Category.pdf"
+                            frameborder="0"></iframe>
                     </div>
                 </div>
-
-                <!-- PDF Item 2 -->
                 <div class="pdf-item">
-                    <a href="C:\Users\35196\Documents\GitHub\beatrizperes.github.io\certificates\BP_Proof of English Proficiency.pdf" download>
+                    <a href="C:\Users\35196\Documents\GitHub\beatrizperes.github.io\certificates\BP_Proof of English Proficiency.pdf"
+                        download>
                         <h4>Proof of English Proficiency</h4>
-                        <p>Click to download or preview</p>
+                        <p>(click to download or preview)</p>
                     </a>
                     <div class="pdf-preview-container">
-                        <iframe class="pdf-preview" src="C:\Users\35196\Documents\GitHub\beatrizperes.github.io\certificates\BP_Proof of English Proficiency.pdf" frameborder="0"></iframe>
+                        <iframe class="pdf-preview"
+                            src="C:\Users\35196\Documents\GitHub\beatrizperes.github.io\certificates\BP_Proof of English Proficiency.pdf"
+                            frameborder="0"></iframe>
                     </div>
                 </div>
-
-                <!-- PDF Item 3 -->
                 <div class="pdf-item">
                     <a href="path_to_your_pdf_3.pdf" download>
                         <h4>Document 3</h4>
-                        <p>Click to download or preview</p>
+                        <p>(click to download or preview)</p>
                     </a>
                     <div class="pdf-preview-container">
                         <iframe class="pdf-preview" src="path_to_your_pdf_3.pdf" frameborder="0"></iframe>
@@ -218,16 +202,10 @@
                 </div>
             </div>
         </section>
-
-
-
-        <!-- Projects Section -->
         <section id="projects">
             <h2>Projects</h2>
             <p>Details about some of my key projects...</p>
         </section>
-
-        <!-- Contact Section -->
         <section id="contact">
             <h2>Contact me</h2>
             <p>Let's get in touch! You can contact me via
@@ -240,7 +218,7 @@
                 <div class="sponsors">
                     <img src="images/eu.jpg" alt="EU Logo" class="footer-logo">
                     <img src="images/plus.jpg" alt="University Logo 1" class="footer-logo">
-                    <img src="images/ubs.jpg" alt="University Logo 2" class="footer-logo">
+                    <img src="images/ubs.png" alt="University Logo 2" class="footer-logo">
                 </div>
                 <p>&copy; 2024 Beatriz Peres.</p>
             </div>
