@@ -20,7 +20,7 @@
     line-height: 150%;
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 350;
     font-style: normal;
 }
 
@@ -66,9 +66,9 @@ body {
 }
 
 .profile-photo {
-    width: 150px;
+    width: 160px;
     /* Increased width */
-    height: 150px;
+    height: 160px;
 
     /*border: 4px solid #633838;*/
     /* Dark border around photo */
@@ -142,8 +142,7 @@ nav a:hover {
     /* Light blue color for visibility */
     text-decoration: none;
     /* Remove underline */
-    border-bottom: 2px solid #854f4f;
-    /* Subtle underline effect */
+
     padding-bottom: 2px;
     /* Add padding for the underline effect */
     transition: color 0.3s, background-color 0.3s;
@@ -168,8 +167,7 @@ nav a:hover {
     /* Light blue color for visibility */
     text-decoration: none;
     /* Remove underline */
-    border-bottom: 2px solid #854f4f;
-    /* Subtle underline effect */
+
     padding-bottom: 2px;
     /* Add padding for the underline effect */
     transition: color 0.3s, background-color 0.3s;
@@ -363,7 +361,7 @@ footer {
 }
 
 
-#education {
+#education, #experience {
     padding: 2rem;
 
     color: #e0e0e0;
@@ -373,13 +371,13 @@ footer {
     /* Matches the line style for consistency */
 }
 
-#education h2 {
+#education h2, #experience h2 {
     font-size: 2rem;
     color: #ffffff;
     margin-bottom: 1.5rem;
 }
 
-#education h3 {
+#education h3, #experience h3 {
     color: #f1f590;
 }
 
@@ -401,7 +399,7 @@ footer {
 }
 
 
-.education-item {
+.education-item, #experience-item {
     margin-bottom: 2rem;
     padding: 1rem;
     border: 1px solid #555;
@@ -409,13 +407,13 @@ footer {
     background-color: #222;
 }
 
-.education-item h3 {
+.education-item h3, #experience-item h3 {
     font-size: 1.5rem;
     color: #cccccc;
     margin-bottom: 0.5rem;
 }
 
-.education-item p {
+.education-item p, #experience p {
     font-size: 1rem;
     color: #aaaaaa;
 }
@@ -536,6 +534,19 @@ margin-bottom: 1.5rem;
     padding-left: 1.5rem;
 }
 
+#geotrilho {
+    color: rgb(125, 123, 219);
+    text-decoration: none;
+
+}
+
+#geotrilho:hover {
+    color: #ffffff;
+    background-color: rgb(125, 123, 219);;
+    border-bottom: none;
+    padding: 0.2rem 0.3rem;
+}
+
 /* PDF Grid Styling */
 .pdf-section {
     margin-top: 2rem;
@@ -603,7 +614,6 @@ margin-bottom: 1.5rem;
 
 }
 
-#espaco_pdf {}
 
 
 /* Responsive Design */
