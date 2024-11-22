@@ -142,14 +142,16 @@ nav a:hover {
     margin-left: 300px;
 }
 
-#about a {
+#about a,
+#education a {
     color: #854f4f;
     text-decoration: none;
     padding-bottom: 2px;
     transition: color 0.3s, background-color 0.3s;
 }
 
-#about a:hover {
+#about a:hover,
+#education a:hover {
     color: #ffffff;
     background-color: #633838;
     border-bottom: none;
@@ -181,10 +183,11 @@ nav a:hover {
     transform: scale(1.8);
 }
 
-#education, 
+#education,
 #experience,
 #skills,
-#about {
+#about,
+#contact {
     padding: 1rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid #444444;
@@ -198,41 +201,30 @@ nav a:hover {
     color: #fff;
 }
 
-#education a {
-    color: #854f4f;
-    text-decoration: none;
-    padding-bottom: 2px;
-    transition: color 0.3s, background-color 0.3s;
-}
-
-#education a:hover {
-    color: #ffffff;
-    background-color: #633838;
-    border-bottom: none;
-    padding: 0.2rem 0.3rem;
-}
-
-#geotrilho {
-    color: rgb(125, 123, 219);
+#geotrilho,
+#contact a {
+    color: rgb(51, 49, 161);
     text-decoration: none;
 
 }
 
-#geotrilho:hover {
+#geotrilho:hover,
+#contact a:hover {
     color: #ffffff;
-    background-color: rgb(125, 123, 219);;
+    background-color: rgb(51, 49, 161);
+    ;
     border-bottom: none;
     padding: 0.2rem 0.3rem;
 }
 
-.education-path, 
+.education-path,
 .experience-path,
 .skills-path {
     display: flex;
     flex-direction: column;
 }
 
-#education h2, 
+#education h2,
 #experience h2,
 #skills h2 {
     color: #ffffff;
@@ -240,7 +232,7 @@ nav a:hover {
     text-align: left;
 }
 
-#education h3, 
+#education h3,
 #experience h3,
 #skills h3 {
     color: #f1f590;
@@ -248,7 +240,7 @@ nav a:hover {
     font-size: 1.4rem;
 }
 
-.education-item, 
+.education-item,
 .experience-item,
 .skills-item {
     margin-bottom: 2rem;
@@ -258,7 +250,8 @@ nav a:hover {
 }
 
 .experience-item ul,
-.languages ul {
+.languages ul,
+#contact ul {
     margin: 0.5rem 0;
     color: #ffffff;
     padding-left: 1.5rem;
@@ -273,7 +266,7 @@ nav a:hover {
 
 .languages,
 .software-tools {
-margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .tools-list {
@@ -305,7 +298,6 @@ margin-bottom: 1.5rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
-    margin-top: 2rem;
     align-items: start;
 }
 
@@ -319,6 +311,7 @@ margin-bottom: 1.5rem;
     color: #fff;
     transition: transform 0.2s ease-in-out;
     border-radius: 5px;
+    margin-bottom: 2rem;
 }
 
 .description-column {
@@ -326,7 +319,9 @@ margin-bottom: 1.5rem;
     color: #fff;
     font-size: 1rem;
     line-height: 1.5;
+    margin-bottom: 2rem;
 }
+
 
 .pdf-column:hover {
     transform: scale(1.05);
@@ -356,17 +351,73 @@ margin-bottom: 1.5rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .pdf-preview-container iframe {
     height: 100%;
-    max-width: 100%; 
     border: none;
-    background-color: #fff; 
+    background-color: #fff;
     margin-top: 1rem;
     border-radius: 3px;
 
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.project-column {
+    padding: 1rem;
+    text-align: center;
+    width: auto;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.project-column:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project-column a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.project-column p {
+    color: white;
+    font-size: x-small;
+}
+
+.project-column img {
+    width: 33%;
+    height: auto;
+    object-fit: contain;
+}
+
+#project1 {
+    background-color: #882929;
+}
+
+#project2 {
+    background-color: #113ab6;
+}
+
+#project3 {
+    background-color: #a6cf29;
+}
+
+#contact p {
+    color: white;
 }
 
 footer {
@@ -379,8 +430,8 @@ footer {
     align-items: center;
     width: 100%;
     position: relative;
-    border: 2px solid #633838;
     margin-top: 2rem;
+    font-size: small;
 }
 
 .footer-logos {
@@ -508,15 +559,24 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     #sidebar {
         height: auto;
         padding: 0.5rem;
     }
 
     .pdf-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr !important;
         gap: 1rem;
+        align-items: start;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+        align-items: start;
     }
 
     #experience h2 {
