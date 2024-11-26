@@ -47,17 +47,7 @@ body {
     font-size: 1rem;
 }
 
-.button {
-    background-color: #333333;
-    color: #cccccc;
-    padding: 0.8rem 1.8rem;
-    text-decoration: none;
-    font-weight: bold;
-}
 
-.button:hover {
-    background-color: #633838;
-}
 
 section {
     padding: 2rem;
@@ -142,226 +132,7 @@ nav a:hover {
     margin-left: 300px;
 }
 
-#about a,
-#education a {
-    color: #854f4f;
-    text-decoration: none;
-    padding-bottom: 2px;
-    transition: color 0.3s, background-color 0.3s;
-}
 
-#about a:hover,
-#education a:hover {
-    color: #ffffff;
-    background-color: #633838;
-    border-bottom: none;
-    padding: 0.2rem 0.3rem;
-}
-
-.buttons-about-me {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.images-container {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 4rem;
-}
-
-.images-container img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.images-container img:hover {
-    transform: scale(1.8);
-}
-
-#education,
-#experience,
-#skills,
-#about,
-#contact {
-    padding: 1rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #444444;
-    margin: 2rem 0;
-    color: #fff;
-}
-
-.buttons {
-    padding: 1rem;
-    margin: 2rem 0;
-    color: #fff;
-}
-
-#geotrilho,
-#contact a {
-    color: rgb(51, 49, 161);
-    text-decoration: none;
-
-}
-
-#geotrilho:hover,
-#contact a:hover {
-    color: #ffffff;
-    background-color: rgb(51, 49, 161);
-    ;
-    border-bottom: none;
-    padding: 0.2rem 0.3rem;
-}
-
-.education-path,
-.experience-path,
-.skills-path {
-    display: flex;
-    flex-direction: column;
-}
-
-#education h2,
-#experience h2,
-#skills h2 {
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-    text-align: left;
-}
-
-#education h3,
-#experience h3,
-#skills h3 {
-    color: #f1f590;
-    margin: 0 0 0.5rem;
-    font-size: 1.4rem;
-}
-
-.education-item,
-.experience-item,
-.skills-item {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border: 1px solid #555;
-    background-color: #222;
-}
-
-.experience-item ul,
-.languages ul,
-#contact ul {
-    margin: 0.5rem 0;
-    color: #ffffff;
-    padding-left: 1.5rem;
-    font-size: 1rem;
-}
-
-.skills-description {
-    font-size: 1rem;
-    color: #bbb;
-    margin-bottom: 1.5rem;
-}
-
-.languages,
-.software-tools {
-    margin-bottom: 1.5rem;
-}
-
-.tools-list {
-    font-size: 1rem;
-    color: #bbb;
-    margin-bottom: 0.5rem;
-}
-
-.icon-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 10px;
-}
-
-.icon-grid img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    background-color: #ffffff;
-    padding: 8px;
-    transition: transform 0.2s;
-}
-
-.icon-grid img:hover {
-    transform: scale(1.2);
-}
-
-.pdf-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem;
-    align-items: start;
-}
-
-.pdf-column {
-    padding: 1rem;
-    text-align: center;
-    width: auto;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #444;
-    color: #fff;
-    transition: transform 0.2s ease-in-out;
-    border-radius: 5px;
-    margin-bottom: 2rem;
-}
-
-.description-column {
-    padding: 1rem;
-    color: #fff;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-}
-
-
-.pdf-column:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.pdf-column a {
-    text-decoration: none;
-    color: #4b8431;
-    font-weight: bold;
-}
-
-.pdf-column p {
-    color: white;
-    font-size: x-small;
-}
-
-.pdf-preview {
-    width: auto;
-    height: 20%;
-    margin-top: 1rem;
-    border: 2px solid #444;
-}
-
-.pdf-preview-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.pdf-preview-container iframe {
-    height: 100%;
-    border: none;
-    background-color: #fff;
-    margin-top: 1rem;
-    border-radius: 3px;
-
-}
 
 .projects-grid {
     display: grid;
@@ -416,9 +187,7 @@ nav a:hover {
     background-color: #a6cf29;
 }
 
-#contact p {
-    color: white;
-}
+
 
 footer {
     background-color: #000000;
@@ -467,35 +236,11 @@ footer {
     height: 50px;
 }
 
+
 @media (max-width: 768px) {
-    .education-path {
-        gap: 1rem;
-    }
-
-    .education-item h3 {
-        font-size: 1.3rem;
-    }
-
-    .education-item p {
-        font-size: 0.95rem;
-    }
-
-    #skills {
-        padding: 1rem;
-    }
-
-    .icon-grid img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .pdf-grid {
+    .projects-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
-    }
-
-    .experience-item h3 {
-        font-size: 1.2rem;
     }
 
     .footer-content {
@@ -565,31 +310,11 @@ footer {
         padding: 0.5rem;
     }
 
-    .pdf-grid {
-        display: grid;
-        grid-template-columns: 1fr !important;
-        gap: 1rem;
-        align-items: start;
-    }
-
     .projects-grid {
         display: grid;
         grid-template-columns: 1fr !important;
         gap: 1rem;
         align-items: start;
-    }
-
-    #experience h2 {
-        font-size: 1.5rem;
-    }
-
-    .experience-item {
-        padding: 0.8rem;
-    }
-
-    .pdf-column {
-        padding: 0.8rem;
-        font-size: 0.9rem;
     }
 
     #home h1 {
