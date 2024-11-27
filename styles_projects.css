@@ -30,8 +30,8 @@
     color: #cccccc;
 }
 
-.highlight {
-    background-color: #73c072;
+.highlight1 {
+    background-color: #f8bb49;
     color: #fff;
     padding: 0.5rem 1rem;
     font-weight: bold;
@@ -165,7 +165,7 @@ nav a:hover {
 }
 
 .project-column p {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: x-small;
 }
 
@@ -176,11 +176,11 @@ nav a:hover {
 }
 
 #project1 {
-    background-color: #882929;
+    background-color: #f8bb49;
 }
 
 #project2 {
-    background-color: #113ab6;
+    background-color: #9e1b26;
 }
 
 #project3 {
