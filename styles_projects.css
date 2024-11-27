@@ -236,11 +236,71 @@ footer {
     height: 50px;
 }
 
+#experience {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #444444;
+    margin: 2rem 0;
+    color: #fff;
+}
+
+.experience-path {
+    display: flex;
+    flex-direction: column;
+}
+
+#education h2,
+#experience h2,
+#skills h2 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+#experience h3 {
+    color: #f1f590;
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+}
+
+.experience-item {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #555;
+    background-color: #222;
+}
+
+.experience-item ul {
+    margin: 0.5rem 0;
+    color: #ffffff;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+}
+
+#geotrilho {
+    color: rgb(51, 49, 161);
+    text-decoration: none;
+
+}
+
+#geotrilho:hover {
+    color: #ffffff;
+    background-color: rgb(51, 49, 161);
+    ;
+    border-bottom: none;
+    padding: 0.2rem 0.3rem;
+}
+
+
 
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+    }
+
+    .experience-item h3 {
+        font-size: 1.2rem;
     }
 
     .footer-content {
@@ -321,6 +381,15 @@ footer {
         font-size: 1.5rem;
     }
 
+    #experience h2 {
+        font-size: 1.5rem;
+    }
+    
+    .experience-item {
+        padding: 0.8rem;
+    }
+
+    
     #home p {
         font-size: 0.9rem;
     }
