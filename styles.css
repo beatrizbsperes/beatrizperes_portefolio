@@ -378,7 +378,6 @@ nav a:hover {
     font-weight: bold;
     color: #fff;
     transition: transform 0.2s ease-in-out;
-    border-radius: 5px;
     margin-bottom: 2rem;
 }
 
@@ -402,10 +401,11 @@ nav a:hover {
     width: 33%;
     height: auto;
     object-fit: contain;
+    margin-top: 1.5rem;
 }
 
 #project1 {
-    background-color: #f8bb49;
+    background-color: #f8bb49a4;
 }
 
 #project2 {

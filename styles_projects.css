@@ -14,6 +14,8 @@
     padding-top: 20vh;
     padding-bottom: 5rem;
     height: 100vh;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #home p {
@@ -31,7 +33,7 @@
 }
 
 .highlight1 {
-    background-color: #f8bb49;
+    background-color: #f8bb49a4;
     color: #fff;
     padding: 0.5rem 1rem;
     font-weight: bold;
@@ -236,7 +238,18 @@ footer {
     height: 50px;
 }
 
-#experience {
+iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    margin: 0;
+}
+
+.link {
+    margin: 5%;
+}
+
+.experience {
     padding: 1rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid #444444;
@@ -244,20 +257,23 @@ footer {
     color: #fff;
 }
 
+.experience p {
+    text-align: justify;
+}
+
 .experience-path {
     display: flex;
     flex-direction: column;
 }
 
-#education h2,
-#experience h2,
-#skills h2 {
+.education h2,
+.experience h2 {
     color: #ffffff;
     margin-bottom: 1.5rem;
     text-align: left;
 }
 
-#experience h3 {
+.experience h3 {
     color: #f1f590;
     margin: 0 0 0.5rem;
     font-size: 1.4rem;
