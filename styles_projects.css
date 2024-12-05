@@ -33,7 +33,14 @@
 }
 
 .highlight1 {
-    background-color: #f8bb49a4;
+    background-color: #ffd90071;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+.highlight2 {
+    background-color: #6faa1192;
     color: #fff;
     padding: 0.5rem 1rem;
     font-weight: bold;
@@ -178,11 +185,11 @@ nav a:hover {
 }
 
 #project1 {
-    background-color: #f8bb49;
+    background-color: #ffd90071;
 }
 
 #project2 {
-    background-color: #9e1b26;
+    background-color: #6faa1192;
 }
 
 #project3 {

@@ -173,14 +173,14 @@ nav a:hover {
 }
 
 .images-container img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .images-container img:hover {
-    transform: scale(1.8);
+    transform: scale(1.3);
 }
 
 #education,
@@ -405,15 +405,15 @@ nav a:hover {
 }
 
 #project1 {
-    background-color: #f8bb49a4;
+    background-color: #ffd90071;
 }
 
 #project2 {
-    background-color: #9e1b26;
+    background-color: #6faa1192;
 }
 
 #project3 {
-    background-color: #a6cf29;
+    background-color: #c8210786;
 }
 
 #contact p {
