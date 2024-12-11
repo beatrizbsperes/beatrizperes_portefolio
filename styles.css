@@ -523,6 +523,7 @@ footer {
         bottom: 0;
         top: auto;
         padding: 0.5rem;
+        z-index: 10;
     }
 
     .profile-container,
@@ -568,6 +569,7 @@ footer {
     #sidebar {
         height: auto;
         padding: 0.5rem;
+        z-index: 10;
     }
 
     .pdf-grid {

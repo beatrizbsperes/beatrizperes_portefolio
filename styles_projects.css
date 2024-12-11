@@ -346,6 +346,7 @@ iframe {
         bottom: 0;
         top: auto;
         padding: 0.5rem;
+        z-index: 10;
     }
 
     .profile-container,
@@ -391,6 +392,7 @@ iframe {
     #sidebar {
         height: auto;
         padding: 0.5rem;
+        z-index: 10;
     }
 
     .projects-grid {
