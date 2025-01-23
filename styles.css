@@ -187,7 +187,8 @@ nav a:hover {
 #experience,
 #skills,
 #about,
-#contact {
+#contact,
+#projects {
     padding: 1rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid #444444;
@@ -219,14 +220,16 @@ nav a:hover {
 
 .education-path,
 .experience-path,
-.skills-path {
+.skills-path,
+.projects-path {
     display: flex;
     flex-direction: column;
 }
 
 #education h2,
 #experience h2,
-#skills h2 {
+#skills h2,
+#projects h2 {
     color: #ffffff;
     margin-bottom: 1.5rem;
     text-align: left;
@@ -234,7 +237,8 @@ nav a:hover {
 
 #education h3,
 #experience h3,
-#skills h3 {
+#skills h3,
+#projects h3 {
     color: #f1f590;
     margin: 0 0 0.5rem;
     font-size: 1.4rem;
@@ -242,7 +246,8 @@ nav a:hover {
 
 .education-item,
 .experience-item,
-.skills-item {
+.skills-item,
+.projects-item {
     margin-bottom: 2rem;
     padding: 1rem;
     border: 1px solid #555;
@@ -251,7 +256,8 @@ nav a:hover {
 
 .experience-item ul,
 .languages ul,
-#contact ul {
+#contact ul,
+.semester ul {
     margin: 0.5rem 0;
     color: #ffffff;
     padding-left: 1.5rem;
@@ -265,7 +271,8 @@ nav a:hover {
 }
 
 .languages,
-.software-tools {
+.software-tools,
+.semester {
     margin-bottom: 1.5rem;
 }
 
