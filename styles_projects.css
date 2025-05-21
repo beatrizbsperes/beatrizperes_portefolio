@@ -339,6 +339,15 @@ iframe {
     transform: scale(1.05);
 }
 
+.icon-placeholder img {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1px;
+    transition: transform 0.2s;
+    object-fit: contain;
+}
+
+
 
 
 @media (max-width: 768px) {
