@@ -257,7 +257,7 @@ nav a:hover {
 .experience-item ul,
 .languages ul,
 #contact ul,
-.semester ul {
+.semester1 ul {
     margin: 0.5rem 0;
     color: #ffffff;
     padding-left: 1.5rem;
@@ -272,7 +272,7 @@ nav a:hover {
 
 .languages,
 .software-tools,
-.semester {
+.semester1 {
     margin-bottom: 1.5rem;
 }
 

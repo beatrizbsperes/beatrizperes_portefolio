@@ -46,6 +46,13 @@
     font-weight: bold;
 }
 
+.highlight2 {
+    background-color: #6faa1192;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
 body {
     display: flex;
     background-color: #302f2f;
@@ -312,6 +319,24 @@ iframe {
     ;
     border-bottom: none;
     padding: 0.2rem 0.3rem;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.icon-grid img {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1px;
+    transition: transform 0.2s;
+    object-fit: contain;
+}
+
+.icon-grid img:hover {
+    transform: scale(1.05);
 }
 
 
