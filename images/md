@@ -1,0 +1,59 @@
+# ESA’s new Sentinel data Zarr format for flood analysis 
+
+### Temporal analysis and monitoring routines using Sentinel-1 data are about to become easier thanks to the new Zarr format. We’ll see how we can create workflows for basic SAR operations using cloud-native tools to study the 2024 Valencia floods.
+
+## ESA EOPF family
+I started my summer internship at Development Seed, working on the [EOPF toolkit project](https://github.com/eopf-toolkit). From an outside perspective, I wanted to demonstrate how to use, work and play with the Sentinel-1 data using the new `.zarr` format. 
+
+My entering gate (and main helper) was the [EOPF 101](https://github.com/eopf-toolkit/eopf-101/tree/main). This toolkit is a facilitator for early `.zarr` users (just like me!), helping navigating through and understanding this cloud based format. 
+
+In the end, to apply everything I learned, I created a use case with Sentinel-1 GRD Zarr data, focusing on monitoring the 2024 Valencia floods. But we’ll get to it!
+
+## But why `.zarr` matters?
+The `.zarr` format is cloud-native, chunked, compressed and organized in n-dimension arrays. But these are just words.. What does this really mean? 
+
+Instead of downloading and organizing huge datasets, we can store very large datasets and access only the relevant data we need. The rest of the dataset is left **on-the-fly**. Using the Sentinel-1 GRD example: if we only need to access the measurement group for its variables, why would we load everything else? We don’t! We manipulate the data access to meet our needs.
+
+
+| ![](measurements.png) | ![](datatree.png)  |
+|---------|---------|
+| This, | rather than loading all these!|
+
+A good strategy for Sentinel-1 GRD flood monitoring is to use time series analysis. Since this requires large amounts of data repeated over time, storing datasets in the `.zarr` format helps overcome the complexity of downloading and opening files. It allows us to load only the data we want and access just the variables we need.
+
+## Valencia floods analysis meets cloud-optimized format
+With the little we knew about `.zarr`, we applied it to a real case study: the massive [2024 Valencia floods](https://www.theguardian.com/environment/2025/apr/15/europe-storms-floods-and-wildfires-in-2024-affected-more-than-400000). This turned out to be the perfect performance test, since it involved not just one dataset but **14**! Normally, this would mean downloading 14 `.SAFE` files but with `.zarr` no downloads were needed. 
+
+We manipulated the data directly and accessed only the variables required for our SAR operations. The `xarray` library was a key component. `zarray`’s lazy loading capability ensures that only the necessary data is loaded into memory. The actual computation only happens when we explicitly request results, like plotting or interpolating coordinates. Libraries like `xarray-sentinel` also proved valuable, particularly for intensity backscatter computation.
+
+Because we wanted to run a time series analysis, we stacked the datasets along a new time dimension. We  took advantage of the cool `zarr` and `xarray` combination. To be fair, this was a challenging part:
+
+1. To stack several datasets into a single one they must share the same dimensions, shapes and dimension values.
+2. Sentinel-1 GRD data does not naturally behave this way. It is expectable to have the same dimensions but not the same shape and most definitely not the same dimension values.
+3. [Coregistration](https://elisecolin.medium.com/what-is-coregistration-in-remote-sensing-7d76d48d337d) is the usual solution for aligning SAR images, but currently no python library supports coregistration of `zarr` data.
+
+But `.zarr` is so easy to handle and manipulate that we were able to perform a DIY coregistration using only xarray.
+
+| ![](data_cube.png) | ![](plot.png)  |
+|---------|---------|
+
+Not all tools are available yet and some SAR operations still can’t be done as they were in some other SAR processing applications, such as SNAP (ESA's free software platform for processing and analyzing Sentinel data - it performs all the necessary operation over SAR data). But with `.zarr` the processing was incredibly fast. What would have been slow and heavy in SNAP, ran smoothly on a full python environment. And the best part was that we handled everything in one place without switching softwares.
+
+## Rocks on the way? Let's build a castle then!
+There’s still some challenges we need to face regarding Sentinel-1 `.zarr`:
+- For Sentinel-1 GRD data, most datasets are not (**yet!**) available in the STAC catalog where `.SAFE` data is converted to `.zarr`. But they will be! Currently, this limitation makes it harder to work with, manage or even play Sentinel-1 data. For last minute needs, there are two useful emergency contacts: 
+    1. Requesting specific data on [EOPF sample data request](https://github.com/EOPF-Sample-Service/eopf-sample-data). 
+    2. [Convert the data](https://gitlab.eopf.copernicus.eu/cpm/eopf-cpm) yourself, which is not that hard (trust me!).
+- There are only a few Python libraries that handle SAR operations for `.zarr`-based data. Within these small groups, the available operations are limited. However, intensity backscatter computation is possible, which has already solved many challenges in our flood mapping workflow.
+
+| ![](grd.png) | ![](intensity.png)  |
+|---------|---------|
+| Raw values | Intensity backscatter|
+
+## Exciting times ahead
+We don't have all the necessary tools, **yet**. Some SAR operations over Sentinel-1 data are not possible, **yet**. But the path that `.zarr` is forging has already shaken the Copernicus Sentinel world, with no way back!
+
+Libraries like [sarsen](https://github.com/bopen/sarsen) are already enabling steps toward a fully cloud-native, Python-based SAR processing workflow. The open source community is gradually recreating complex SAR operations that once seemed only possible using applications like SNAP over the `.SAFE` format. **And these are great news!**
+
+As an Earth Observation and Geo-Data Science student, discovering and learning about `.zarr` and its capabilities was incredibly valuable. I started as one of the EOPF 101 users and, step by step, came to understand the positive impact that the Sentinel `.zarr` conversion will have from now on. Above all, it is exciting to realize that these changes were motivated, driven and developed by the open-source community. And anyone can be a part of it! The next big contributions on the cloud-native SAR processing workflows might come from me, you or any other EOPF 101 user!
+
