@@ -321,6 +321,20 @@ iframe {
     padding: 0.2rem 0.3rem;
 }
 
+#devseed {
+    color: rgb(196, 134, 34);
+    text-decoration: none;
+
+}
+
+#devseed:hover {
+    color: #ffffff;
+    background-color: rgb(196, 134, 34);
+    ;
+    border-bottom: none;
+    padding: 0.2rem 0.3rem;
+}
+
 .icon-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
