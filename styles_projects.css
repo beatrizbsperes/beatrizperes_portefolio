@@ -361,8 +361,23 @@ iframe {
     object-fit: contain;
 }
 
+.icon-grid2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
 
+.icon-grid2 img {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1px;
+    transition: transform 0.2s;
+    object-fit: contain;
+}
 
+.icon-grid2 img:hover {
+    transform: scale(1.05);
+}
 
 @media (max-width: 768px) {
     .projects-grid {
