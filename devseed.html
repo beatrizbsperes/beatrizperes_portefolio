@@ -133,7 +133,7 @@
                     <h3>Technical challenges</h3>
                     <p>One challenge was coregistration. Sentinel-1 GRD acquisitions do not naturally align in shape or
                         dimension values, which complicates stacking into a single time series. While traditional SAR
-                        software (e.g., SNAP) handles this automatically, no Python library currently supports
+                        software (e.g. SNAP) handles this automatically, no Python library currently supports
                         coregistration of Zarr-based data.
 
                         To address this, I implemented a DIY coregistration approach using xarray, which allowed me to
