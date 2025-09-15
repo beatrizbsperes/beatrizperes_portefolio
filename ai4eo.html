@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatriz Peres | ePortfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles_projects.css">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <aside id="sidebar">
+        <div class="profile-container">
+            <img src="images/profile_pic2.jpeg" alt="Profile Photo" class="profile-photo">
+        </div>
+        <nav>
+            <a href="index.html#home"><img height="25" class="icon" src="images/house-solid.svg" />
+                <span>Home</span></a>
+            <a href="index.html#about"><img height="25" class="icon" src="images/address-card-regular.svg" />
+                <span>About
+                    me</span></a>
+            <a href="index.html#education"><img height="25" class="icon" src="images/school-solid.svg" />
+                <span>Education</span></a>
+            <a href="index.html#experience"><img height="25" class="icon" src="images/briefcase-solid.svg" />
+                <span>Experience</span></a>
+            <a href="index.html#skills"><img height="25" class="icon" src="images/list-check-solid.svg" /> <span>Skills
+                    and
+                    Certificates</span></a>
+            <a href="index.html#projects"><img height="25" class="icon" src="images/folder-open-regular.svg" />
+                <span>Projects</span></a>
+            <a href="index.html#contact"><img height="25" class="icon" src="images/envelope-solid.svg" />
+                <span>Contact</span></a>
+        </nav>
+    </aside>
+    <main id="content">
+        <section id="home">
+            <h1>This is my <span class="highlight2">International Summer School report: AI4EO symposium</h1>
+            <p>Scroll down to find more!</p>
+        </section>
+
+        <section class="experience">
+            <h2>Report on the International Summer School: <a id="ai4eo" href="https://ai4eo2025.irisa.fr/">AI4EO
+                    Symposium</a></h2>
+            <div class="experience-path">
+                <div class="experience-item">
+                    <h3>Introduction</h3>
+                    <p>The AI4EO symposium started in 2022 as part of the International AI Future Lab AI4EO. After three
+                        successful editions in Munich, the symposium grew international and the 2025 edition took place
+                        in Rennes, Brittany, France, on September 11–12.</p>
+                    <p>
+                        The symposium was organized by the OBELIX team at IRISA, with support from ESA Phi-lab, CNRS,
+                        ISPRS, the Cluster SequoIA, the International AI Future Lab AI4EO, the EMJM Copernicus Master in
+                        Digital Earth (which I take part), the Brittany region and the Rennes metropolitan area.
+                    </p>
+                </div>
+                <div class="experience-item">
+                    <h3>AI enhancing Earth Observation</h3>
+                    <p> This event brought together the scientific community (PhD students, postdocs, early-career and
+                        senior researchers) and industry partners working with artificial intelligence for Earth
+                        observation (AI4EO). Over two days, the program featured research highlights, invited talks,
+                        poster and oral sessions, panel discussions and social events.</p>
+                    <div class="icon-placeholder">
+                        <p>
+                        <div class="icon-grid">
+                            <p><img src="images/measurements.png">
+                            <ul>Loading just this</ul>
+                            </p>
+                            <p><img src="images/datatree.png">
+                            <ul>, rather than all these!</ul>
+                            </p>
+                        </div>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="experience-item">
+                    <h3>Valencia flood user case</h3>
+                    <p>In September 2024, heavy rainfall caused severe flooding in Valencia, Spain. The event was chosen
+                        as a case study to test cloud-native SAR workflows.
+
+                        For the analysis, I worked with 14 Sentinel-1 GRD acquisitions spanning the pre-flood, flood,
+                        and post-flood phases. Traditionally, this would involve downloading and managing 14 SAFE files.
+                        Instead, using Zarr allowed me to directly access cloud-hosted arrays.
+
+                        By leveraging xarray and xarray-sentinel, I constructed a time series dataset. Intensity
+                        backscatter values were compared across dates to detect flooded areas:</p>
+
+                    <ul>Low backscatter (dark values) indicated smooth water surfaces</ul>
+                    <ul>Higher values represented urban structures, vegetation, or dry land</ul>
+                    <ul>Avoid downloading bulky files</ul>
+                    <p> By stacking datasets along a new time dimension, it was possible to observe how floodwaters
+                        expanded and receded during the event. While this workflow did not aim to produce an official
+                        flood map, it demonstrated how Zarr lowers the entry barrier for building multi-temporal SAR
+                        analyses.</p>
+                    <div class="icon-placeholder">
+                        <p>
+                        <div class="icon-grid">
+                            <p><img src="images/data_cube.png">
+                            <ul>Stacked datasets over a new time dimension</ul>
+                            </p>
+                            <p><img src="images/plot.png">
+                            <ul>Analysing the flood evolution over a known point</ul>
+                            </p>
+                            <p><img src="images/times_series.png">
+                            <ul>Plotting of msot of the intensity images</ul>
+                            </p>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <h3>Technical challenges</h3>
+                    <p>One challenge was coregistration. Sentinel-1 GRD acquisitions do not naturally align in shape or
+                        dimension values, which complicates stacking into a single time series. While traditional SAR
+                        software (e.g. SNAP) handles this automatically, no Python library currently supports
+                        coregistration of Zarr-based data.
+
+                        To address this, I implemented a DIY coregistration approach using xarray, which allowed me to
+                        align datasets sufficiently for exploratory analysis. This highlighted both the flexibility of
+                        Zarr and the need for continued tool development in the ecosystem.</p>
+                    <div class="icon-placeholder">
+                        <p>
+                        <div class="icon-grid">
+                            <p><img src="images/grd.png">
+                            <ul>Raw values</ul>
+                            </p>
+                            <p><img src="images/intensity.png">
+                            <ul>Intensity backscatter</ul>
+                            </p>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <h3>Advantages and Limitations</h3>
+                    <p>Advantages of using Zarr for SAR workflows:</p>
+                    <ul>Faster processing compared to traditional desktop software (e.g., SNAP)</ul>
+                    <ul>Cloud-native storage and direct access to relevant variables</ul>
+                    <ul>Seamless integration with Python libraries (xarray, dask)</ul>
+                    <p>Current limitations:</p>
+                    <ul>Limited availability of Sentinel-1 GRD Zarr datasets in public STAC catalogs</ul>
+                    <ul>Restricted set of SAR operations supported in Python libraries</ul>
+                    <ul>Lack of built-in coregistration tools for Zarr</ul>
+                    <p>Workarounds include requesting data via the <a id="devseed"
+                            href="https://github.com/EOPF-Sample-Service/eopf-sample-data">EOPF sample service</a>
+                        or converting SAFE products to Zarr format independently using the <a id="devseed"
+                            href="https://gitlab.eopf.copernicus.eu/cpm/eopf-cpm">EOPF CPM</a> tool
+                        .</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Outlook</h3>
+                    <p>The migration of Sentinel-1 data to Zarr represents an important step toward cloud-native SAR
+                        processing. Open-source libraries such as <a id="devseed"
+                            href="https://github.com/bopen/sarsen">sarsen</a>
+                        are already expanding the available workflows, progressively replicating operations
+                        traditionally performed in SNAP.</p>
+                    <p>Although not all functionalities are yet available, the direction is clear: Zarr enables faster,
+                        more flexible, and scalable analysis directly in Python environments. This has significant
+                        implications for disaster monitoring, where rapid access to data is critical.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Personal reflection</h3>
+                    <p>Through this internship, I gained hands-on experience with Zarr, SAR data handling, and
+                        cloud-native workflows. Starting with EOPF 101, I progressed from a beginner to building a
+                        complete time series analysis workflow applied to a real-world disaster case.</p>
+                    <p>This project allowed me to contribute to the early stages of cloud-native SAR processing and
+                        highlighted the importance of open-source collaboration. The ongoing development of the EOPF
+                        ecosystem demonstrates how collective efforts can reshape Earth Observation workflows — and
+                        being part of this process was both valuable and motivating.</p>
+                    <div class="icon-grid2">
+                        <p><img src="images/office.jpg"></p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="projects">
+            <h2>Other Projects</h2>
+
+            <div class="projects-grid">
+                <ul>
+                    <div class="project-column" id="project1">
+                        <a href="ars.html">
+                            <h4>Advanced Remote Sensing</h4>
+                            <p>(click here to access the course projects)</p>
+                        </a>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="project-column" id="project1">
+                        <a href="methods.html">
+                            <h4>Methods in Spatial Analysis</h4>
+                            <p>(click here to access the course projects)</p>
+                        </a>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="project-column" id="project1">
+                        <a href="spatialsimulations.html">
+                            <h4>Systems Thinking in Spatial Representations: Spatial Simulations</h4>
+                            <p>(click here to access the course projects)</p>
+                        </a>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="project-column" id="project1">
+                        <a href="spatialdatabases.html">
+                            <h4>Spatial Databases</h4>
+                            <p>(click here to access the course projects)</p>
+                        </a>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="project-column" id="project1">
+                        <a href="digitalearth.html">
+                            <h4>Digital Earth: Big Earth Data Concepts</h4>
+                            <p>(click here to access the course projects)</p>
+                        </a>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="project-column" id="project2">
+                        <a href="bip.html">
+                            <h4>BIP programme: Quantifying vulnerability to natural hazards</h4>
+                            <p>(click here to access the course projects)</p>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+
+        </section>
+        <footer id="footer">
+            <div class="footer-content">
+                <div class="sponsors">
+                    <img src="images/eu.jpg" alt="EU Logo" class="footer-logo">
+                    <img src="images/plus.jpg" alt="University Logo 1" class="footer-logo">
+                    <img src="images/ubs.png" alt="University Logo 2" class="footer-logo">
+                    <p>Co-funded by the European Union, Erasmus Mundus Joint Master (EMJM)</p>
+                    <p>Copernicus Master in Digital Earth</p>
+                    <p>&copy; 2024 Beatriz Peres.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
