@@ -64,117 +64,111 @@
                         senior researchers) and industry partners working with artificial intelligence for Earth
                         observation (AI4EO). Over two days, the program featured research highlights, invited talks,
                         poster and oral sessions, panel discussions and social events.</p>
+                    <p>It was great to have the opportunity to connect and learn form so many experts on the area!</p>
                     <div class="icon-placeholder">
                         <p>
                         <div class="icon-grid">
-                            <p><img src="images/measurements.png">
-                            <ul>Loading just this</ul>
-                            </p>
-                            <p><img src="images/datatree.png">
-                            <ul>, rather than all these!</ul>
-                            </p>
-                        </div>
-                        </p>
-                    </div>
-
-                </div>
-                <div class="experience-item">
-                    <h3>Valencia flood user case</h3>
-                    <p>In September 2024, heavy rainfall caused severe flooding in Valencia, Spain. The event was chosen
-                        as a case study to test cloud-native SAR workflows.
-
-                        For the analysis, I worked with 14 Sentinel-1 GRD acquisitions spanning the pre-flood, flood,
-                        and post-flood phases. Traditionally, this would involve downloading and managing 14 SAFE files.
-                        Instead, using Zarr allowed me to directly access cloud-hosted arrays.
-
-                        By leveraging xarray and xarray-sentinel, I constructed a time series dataset. Intensity
-                        backscatter values were compared across dates to detect flooded areas:</p>
-
-                    <ul>Low backscatter (dark values) indicated smooth water surfaces</ul>
-                    <ul>Higher values represented urban structures, vegetation, or dry land</ul>
-                    <ul>Avoid downloading bulky files</ul>
-                    <p> By stacking datasets along a new time dimension, it was possible to observe how floodwaters
-                        expanded and receded during the event. While this workflow did not aim to produce an official
-                        flood map, it demonstrated how Zarr lowers the entry barrier for building multi-temporal SAR
-                        analyses.</p>
-                    <div class="icon-placeholder">
-                        <p>
-                        <div class="icon-grid">
-                            <p><img src="images/data_cube.png">
-                            <ul>Stacked datasets over a new time dimension</ul>
-                            </p>
-                            <p><img src="images/plot.png">
-                            <ul>Analysing the flood evolution over a known point</ul>
-                            </p>
-                            <p><img src="images/times_series.png">
-                            <ul>Plotting of msot of the intensity images</ul>
-                            </p>
+                            <p><img src="images/ai4eo1.png"></p>
+                            <p><img src="images/ai4eo2.png"></p>
                         </div>
                         </p>
                     </div>
                 </div>
                 <div class="experience-item">
-                    <h3>Technical challenges</h3>
-                    <p>One challenge was coregistration. Sentinel-1 GRD acquisitions do not naturally align in shape or
-                        dimension values, which complicates stacking into a single time series. While traditional SAR
-                        software (e.g. SNAP) handles this automatically, no Python library currently supports
-                        coregistration of Zarr-based data.
-
-                        To address this, I implemented a DIY coregistration approach using xarray, which allowed me to
-                        align datasets sufficiently for exploratory analysis. This highlighted both the flexibility of
-                        Zarr and the need for continued tool development in the ecosystem.</p>
+                    <h3> “EoS-FM: Can an Ensemble of Specialist Models act as a Generalist Feature Extractor?”
+                        presentation</h3>
+                    <p> Over all the talks, presentations and chats that I had the pleasure to be part of during the
+                        symposium,the one that defenatly stood out was a poster presenting “EoS-FM: Can an Ensemble of
+                        Specialist Models act as a Generalist Feature Extractor?”. This work was
+                        presented by Pierre Adorni, a PhD student at the IRISA center and I decided that I wanted to
+                        dive deeper on the topic!</p>
+                    <br>
                     <div class="icon-placeholder">
                         <p>
                         <div class="icon-grid">
-                            <p><img src="images/grd.png">
-                            <ul>Raw values</ul>
-                            </p>
-                            <p><img src="images/intensity.png">
-                            <ul>Intensity backscatter</ul>
-                            </p>
+                            <p><img src="images/poster.jpeg"></p>
                         </div>
                         </p>
                     </div>
                 </div>
                 <div class="experience-item">
-                    <h3>Advantages and Limitations</h3>
-                    <p>Advantages of using Zarr for SAR workflows:</p>
-                    <ul>Faster processing compared to traditional desktop software (e.g., SNAP)</ul>
-                    <ul>Cloud-native storage and direct access to relevant variables</ul>
-                    <ul>Seamless integration with Python libraries (xarray, dask)</ul>
-                    <p>Current limitations:</p>
-                    <ul>Limited availability of Sentinel-1 GRD Zarr datasets in public STAC catalogs</ul>
-                    <ul>Restricted set of SAR operations supported in Python libraries</ul>
-                    <ul>Lack of built-in coregistration tools for Zarr</ul>
-                    <p>Workarounds include requesting data via the <a id="devseed"
-                            href="https://github.com/EOPF-Sample-Service/eopf-sample-data">EOPF sample service</a>
-                        or converting SAFE products to Zarr format independently using the <a id="devseed"
-                            href="https://gitlab.eopf.copernicus.eu/cpm/eopf-cpm">EOPF CPM</a> tool
-                        .</p>
+                    <h3>EoS-FM: What is the problem?</h3>
+                    <p>The poster and Pierre Adorni’s presentation about it started by showcasing the state of art on
+                        the
+                        newer foundation models (FM). Recent progress in FM has demonstrated significant potential
+                        for advancing applications in the remote sensing domain, transforming the paradigm of machine
+                        learning and AI for earth observation. However, the success of foundation models has largely
+                        relied on scaling up model size and pretraining datasets, a strategy that comes with
+                        considerable costs in terms of power efficiency and computational demand. Most of these
+                        models have a huge number of parameters, making it impossible to retrain and deploy on
+                        regular machines. Training such models is extremely expensive and resource-intensive and,
+                        unless pre-existing trained models and weights are used, many of these advances remain
+                        inaccessible. In their raw form, these models are too large, too expensive, too slow, too
+                        general
+                        or too risky to be used directly in real-world products or workflows. The problem faced on this
+                        poster relies on this trend towards ever-larger models therefore presents substantial
+                        challenges,
+                        particularly for adaptation and deployment in resource-constrained environments. The research
+                        reports the problem just explained before and tries to present an innovative possible solution
+                        for
+                        this problem.</p>
                 </div>
                 <div class="experience-item">
-                    <h3>Outlook</h3>
-                    <p>The migration of Sentinel-1 data to Zarr represents an important step toward cloud-native SAR
-                        processing. Open-source libraries such as <a id="devseed"
-                            href="https://github.com/bopen/sarsen">sarsen</a>
-                        are already expanding the available workflows, progressively replicating operations
-                        traditionally performed in SNAP.</p>
-                    <p>Although not all functionalities are yet available, the direction is clear: Zarr enables faster,
-                        more flexible, and scalable analysis directly in Python environments. This has significant
-                        implications for disaster monitoring, where rapid access to data is critical.</p>
+                    <h3>EoS-FM: Why is it important?</h3>
+                    <p>Reducing the size of large foundation models is not a trivial task and, in many cases,
+                        due to their architectural design, it is simply not feasible. To address this challenge, this
+                        research introduces a novel and relevant solution: a new type of architecture aimed at improving
+                        the usability of foundation models by reducing both computational time and parameter count.
+                        The proposed approach, <a id="ai4eo" href="https://github.com/pierreadorni/EoS-FM">EoS-FM</a>,
+                        is an architecture in which images are first processed by a
+                        lightweight router that dispatches them to multiple pretrained specialist encoders. This is
+                        where
+                        the model proves to be both innovative and valuable: users can select which encoders to
+                        employ according to their specific needs, effectively pruning the model for the task at hand.
+                        This
+                        flexibility makes EoS-FM significantly lighter than conventional foundation models, easier to
+                        adapt to diverse applications and more cost-efficient to train. By default, the model integrates
+                        14
+                        different encoders (including CaFFe, MiniFrance, and ImageNet, among others), yet it still
+                        maintains a much smaller parameter size compared to existing models. The innovative part of
+                        this architecture design is that the user can prune the model, augmenting or decreasing the
+                        number of encoders to meet the user’s need. While CROMA has 303M parameters, DOFA
+                        112M and GFM-Swin 87M, EoS-FM operates with only 47M, and this is already a significant
+                        decrease that makes tasks like training or deployment easier. After the encoding stage, the
+                        extracted features are fused and then passed to task-specific decoders for fine-tuning, ensuring
+                        adaptability and efficiency across downstream tasks.</p>
                 </div>
                 <div class="experience-item">
-                    <h3>Personal reflection</h3>
-                    <p>Through this internship, I gained hands-on experience with Zarr, SAR data handling, and
-                        cloud-native workflows. Starting with EOPF 101, I progressed from a beginner to building a
-                        complete time series analysis workflow applied to a real-world disaster case.</p>
-                    <p>This project allowed me to contribute to the early stages of cloud-native SAR processing and
-                        highlighted the importance of open-source collaboration. The ongoing development of the EOPF
-                        ecosystem demonstrates how collective efforts can reshape Earth Observation workflows — and
-                        being part of this process was both valuable and motivating.</p>
-                    <div class="icon-grid2">
-                        <p><img src="images/office.jpg"></p>
-                    </div>
+                    <h3>EoS-FM: 3 strengths and 3 weaknesses</h3>
+                    <p>The originality of EoS-FM is a clear strength, particularly in allowing users to select the
+                        most suitable encoders for their tasks, which reduces computational demands. Another positive
+                        factor about this model is that the results so far are promising, with performance only slightly
+                        behind larger foundation models in certain tasks. Also, because it is a work in progress and it
+                        has an open architecture, the pruning process is easy and recommended. For further steps on
+                        the development it is important to keep in mind that the choice of encoders and datasets matter
+                        and more isn’t always better. A lightweight router can cut costs while keeping performance high.
+                        These two are probably the greatest strengths of EoS-FM. However, there are some limitations:
+                        free and open-source models already exist, which questions whether this problem is as critical
+                        as presented.In fact, foundation models like <a id="ai4eo"
+                            href="https://github.com/Clay-foundation/model">Clay</a> already provide pretrained weights
+                        and
+                        support multiple types of satellite imagery, addressing the challenge of local training and
+                        deployment—users only need to fine-tune the model’s head. Moreover, since the approach was
+                        still untested at the time, it remains uncertain whether EoS-FM will consistently outperform
+                        existing models. In practice, adapting the architecture for specific tasks may introduce extra
+                        work, and in some cases the parameter count could still approach that of other pretrained
+                        models. Finally, one could argue that simply fine-tuning the head of an existing FM might
+                        achieve similar results without requiring a new architecture, as seen explained before regarding
+                        Clay model, for example.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>EoS-FM: Outlooking</h3>
+                    <p>Modern AI models can do outstanding task taking as input satellite images, but the
+                        better the model, the larger and slow it is and much more expensive to use. The EoS-FM
+                        approach tries a smarter solution, splitting images between smaller, specialized existing models
+                        and letting the users pick which ones to use. This makes the system faster, cheaper and easier
+                        to adapt while still keeping good performance. Studying this approach helps understand new
+                        ways to make AI for earth observation more practical and efficient.</p>
                 </div>
             </div>
 
@@ -228,6 +222,14 @@
                     <div class="project-column" id="project2">
                         <a href="bip.html">
                             <h4>BIP programme: Quantifying vulnerability to natural hazards</h4>
+                            <p>(click here to access the course projects)</p>
+                        </a>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="project-column" id="project2">
+                        <a href="devseed.html">
+                            <h4>Summer Internship: Development Seed</h4>
                             <p>(click here to access the course projects)</p>
                         </a>
                     </div>
